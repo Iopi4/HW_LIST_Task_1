@@ -4,12 +4,13 @@
  */
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        ArrayList<String> todoList = new ArrayList<>();
+        //Заменен тип переменной на List (было ArrayList)
+        List<String> todoList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -101,10 +102,11 @@ public class Main {
     }
 
     //Создадим отдельный метод для вызова списка дел через цикл for each
-    public static void todoListsPrint(ArrayList<String> arrayList){
+    public static void todoListsPrint(List<String> arrayList){
         System.out.println("Ваш список дел:");
-        for (String s: arrayList){
-            System.out.println(arrayList.indexOf(s) + 1 + ". " + s);
+        //Имя переменной заменено на listsPrint (было s),
+        for (String listsPrint: arrayList){
+            System.out.println(arrayList.indexOf(listsPrint) + 1 + ". " + listsPrint);
         }
         System.out.println();
     }
