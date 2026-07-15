@@ -52,11 +52,11 @@ public class Main {
                         todoList.add(task);
                         System.out.println("Добавлено!");
                     }
-                    todoListsPrint(todoList);
+                    printTodoList(todoList);
                     break;
 
                 case 2:
-                    todoListsPrint(todoList);
+                    printTodoList(todoList);
                     break;
 
                 case 3:
@@ -77,7 +77,7 @@ public class Main {
                         System.out.println("Ошибка. Надо ввести число");
                     };
 
-                    todoListsPrint(todoList);
+                    printTodoList(todoList);
                     break;
 
                 case 4:
@@ -91,7 +91,7 @@ public class Main {
                     } else {
                         System.out.println("Ошибка. Такой задачи нет");
                     }
-                    todoListsPrint(todoList);
+                    printTodoList(todoList);
                     break;
 
                 default:
@@ -102,11 +102,12 @@ public class Main {
     }
 
     //Создадим отдельный метод для вызова списка дел через цикл for each
-    public static void todoListsPrint(List<String> arrayList){
+    /// * Переименовал метод и переменные, сделал их говорящими
+    public static void printTodoList(List<String> todoList){
         System.out.println("Ваш список дел:");
-        //Имя переменной заменено на listsPrint (было s),
-        for (String listsPrint: arrayList){
-            System.out.println(arrayList.indexOf(listsPrint) + 1 + ". " + listsPrint);
+        /// * Вывод списка дел сделан через for i
+        for (int i = 0; i < todoList.size(); i++) {
+            System.out.println((i + 1) + ". " + todoList.get(i));
         }
         System.out.println();
     }
